@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  lexisgraph:
+    build: .
+    container_name: lexisgraph
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      # persist indexes across container restarts
+      - lexisgraph_data:/app/data
+
+volumes:
+  lexisgraph_data:

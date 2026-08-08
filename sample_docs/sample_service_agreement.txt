@@ -1,0 +1,93 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is entered into as of March 15, 2024,
+by and between Acme Consulting Inc., a Delaware corporation ("Provider"), and
+Bright Horizons LLC, a New York limited liability company ("Client").
+
+Section 1. Definitions
+"Services" means the consulting and software development services described in
+each Statement of Work executed under this Agreement. "Confidential Information"
+means any non-public information disclosed by either party, whether marked
+confidential or not, including business plans, technical data, and pricing.
+
+Section 2. Term and Termination
+2.1 This Agreement commences on March 15, 2024 and continues for an initial term
+of twenty-four (24) months, unless terminated earlier in accordance with this
+Section 2.
+2.2 Either party may terminate this Agreement for convenience upon ninety (90)
+days' prior written notice to the other party.
+2.3 Either party may terminate this Agreement immediately upon written notice if
+the other party materially breaches this Agreement and fails to cure such breach
+within thirty (30) days of receiving notice of the breach.
+2.4 Upon termination, Client shall pay Provider for all Services performed up to
+the effective date of termination, including any non-cancellable expenses.
+
+Section 3. Fees and Payment
+3.1 Client shall pay Provider the fees set forth in each Statement of Work.
+3.2 Provider shall invoice Client monthly in arrears. All invoices are due within
+thirty (30) days of the invoice date.
+3.3 Late payments shall accrue interest at a rate of 1.5% per month, or the
+maximum rate permitted by law, whichever is lower.
+3.4 The total value of this Agreement, inclusive of all Statements of Work
+executed as of the Effective Date, is estimated at $450,000.
+
+Section 4. Limitation of Liability
+4.1 IN NO EVENT SHALL EITHER PARTY'S TOTAL LIABILITY ARISING OUT OF OR RELATED TO
+THIS AGREEMENT EXCEED THE TOTAL FEES PAID BY CLIENT TO PROVIDER IN THE TWELVE
+(12) MONTHS PRECEDING THE CLAIM.
+4.2 NEITHER PARTY SHALL BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOST PROFITS, EVEN IF ADVISED OF
+THE POSSIBILITY OF SUCH DAMAGES.
+4.3 The limitations in this Section 4 shall not apply to breaches of Section 5
+(Confidentiality) or claims arising from gross negligence or willful misconduct.
+
+Section 5. Confidentiality
+5.1 Each party agrees to hold the other party's Confidential Information in
+strict confidence and not to disclose it to any third party without prior
+written consent, except as required by law.
+5.2 This obligation of confidentiality shall survive termination of this
+Agreement for a period of five (5) years.
+
+Section 6. Indemnification
+6.1 Provider shall indemnify, defend, and hold harmless Client from any
+third-party claims arising from Provider's gross negligence or willful
+misconduct in performing the Services.
+6.2 Client shall indemnify, defend, and hold harmless Provider from any
+third-party claims arising from Client's misuse of the deliverables.
+
+Section 7. Governing Law and Dispute Resolution
+7.1 This Agreement shall be governed by the laws of the State of Delaware,
+without regard to its conflict of laws principles.
+7.2 Any dispute arising out of this Agreement shall first be submitted to
+good-faith negotiation between senior executives of both parties. If unresolved
+within thirty (30) days, the dispute shall be settled by binding arbitration in
+Wilmington, Delaware under the rules of the American Arbitration Association.
+
+Section 8. Intellectual Property
+8.1 All pre-existing intellectual property of Provider used in delivering the
+Services remains the sole property of Provider.
+8.2 Upon full payment, Client shall own all deliverables specifically created
+for Client under a Statement of Work, excluding any Provider pre-existing IP
+incorporated therein, which is licensed to Client on a perpetual, royalty-free
+basis.
+
+Section 9. Force Majeure
+Neither party shall be liable for any failure or delay in performance due to
+circumstances beyond its reasonable control, including natural disasters, acts
+of government, labor disputes, or failures of telecommunications infrastructure.
+
+Section 10. Miscellaneous
+10.1 This Agreement, together with all Statements of Work, constitutes the
+entire agreement between the parties.
+10.2 This Agreement may only be amended by a written instrument signed by both
+parties.
+10.3 Notices under this Agreement shall be sent to the addresses set forth in
+the signature block below.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date
+first written above.
+
+Acme Consulting Inc.                    Bright Horizons LLC
+By: _______________________             By: _______________________
+Name: Sarah Chen                        Name: Michael Torres
+Title: VP of Operations                 Title: Chief Executive Officer

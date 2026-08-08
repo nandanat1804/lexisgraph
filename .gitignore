@@ -1,0 +1,24 @@
+# Secrets - NEVER commit this
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+*.egg-info/
+
+# Generated indexes / local data (rebuild with ingest.py)
+data/qdrant_db/
+data/*.pkl
+data/*.gpickle
+!data/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
