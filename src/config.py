@@ -38,7 +38,7 @@ class Config:
 
     # Models
     EMBEDDING_MODEL = _get("EMBEDDING_MODEL", "sentence-transformers/all-MiniLM-L6-v2")
-    RERANKER_MODEL = _get("RERANKER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
+    RERANKER_MODEL = _get("RERANKER_MODEL", "Xenova/ms-marco-MiniLM-L-6-v2")
 
     # Chunking
     CHUNK_SIZE = _get_int("CHUNK_SIZE", 800)

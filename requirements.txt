@@ -6,9 +6,9 @@ pydantic==2.8.2
 pypdf==4.3.1
 langchain-text-splitters==0.2.2
 
-# ---- Embeddings (CPU friendly, ~80MB model) ----
-sentence-transformers==3.0.1
-torch==2.3.1
+# ---- Embeddings & Reranker (ONNX runtime, NOT torch - much lighter,
+#      fits comfortably on free-tier hosts like Render's 512MB plan) ----
+fastembed==0.8.0
 
 # ---- Vector store (embedded/local mode, no server needed) ----
 qdrant-client==1.19.0
@@ -16,8 +16,7 @@ qdrant-client==1.19.0
 # ---- Keyword search ----
 rank-bm25==0.2.2
 
-# ---- Reranking (small CPU cross-encoder, ~22M params) ----
-# (uses sentence-transformers' CrossEncoder, already covered above)
+# ---- Reranking uses fastembed's cross-encoder module, already covered above ----
 
 # ---- Knowledge graph ----
 networkx==3.3

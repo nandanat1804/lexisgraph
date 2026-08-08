@@ -1,27 +1,24 @@
-# CPU-only image, no GPU drivers needed
+# CPU-only image, no GPU drivers needed. No torch here at all - embeddings
+# and reranking run on ONNX runtime (via fastembed), which keeps the whole
+# image AND runtime memory usage small enough for free-tier hosts.
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# System deps for pypdf/torch CPU wheels
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    && rm -rf /var/lib/apt/lists/*
-
 COPY requirements.txt .
-
-# CPU-only torch wheel (much smaller than default CUDA build)
-RUN pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-# Pre-download the small embedding/reranker models at build time so the
-# container doesn't need HuggingFace access at runtime (optional but
-# recommended for production - comment out if you'd rather download lazily)
-RUN python -c "from sentence_transformers import SentenceTransformer, CrossEncoder; \
-    SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2'); \
-    CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2')"
+# Pre-download the small embedding/reranker ONNX models at build time so
+# the container doesn't need HuggingFace access at runtime, and so the
+# models aren't loaded into memory twice (once at build, once at first
+# request) - this download only happens once, here.
+RUN python -c "\
+from fastembed import TextEmbedding; \
+from fastembed.rerank.cross_encoder import TextCrossEncoder; \
+TextEmbedding(model_name='sentence-transformers/all-MiniLM-L6-v2'); \
+TextCrossEncoder(model_name='Xenova/ms-marco-MiniLM-L-6-v2')"
 
 EXPOSE 8000
 
