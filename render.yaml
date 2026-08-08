@@ -4,7 +4,6 @@ services:
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    healthCheckPath: /health
     envVars:
       - key: LLM_PROVIDER
         sync: false
@@ -22,3 +21,17 @@ services:
         value: llama-3.1-8b-instant
       - key: API_KEY
         generateValue: true
+    healthCheckPath: /health
+    # NOTE: Render's free plan does not support persistent disks, so this
+    # is intentionally omitted. That means:
+    # - The sample_docs index baked into the Docker image at build time
+    #   (see Dockerfile's `RUN python ingest.py --docs sample_docs`) is
+    #   always there when the service starts/restarts.
+    # - If you POST to /ingest with your own documents at runtime, that
+    #   index will be LOST on the next restart/redeploy (free instances
+    #   also spin down after 15 min of inactivity and lose local state).
+    # - For persistent custom-document ingestion, upgrade this one
+    #   service to the "starter" plan and re-add a `disk:` block, or
+    #   bake your own documents into the image at build time instead
+    #   of sample_docs in the Dockerfile's RUN ingest.py line.
+
