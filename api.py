@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, HTTPException, Security
+from fastapi.responses import RedirectResponse
 from fastapi.security import APIKeyHeader
 from pydantic import BaseModel
 
@@ -47,6 +48,11 @@ class QueryRequest(BaseModel):
 
 class IngestRequest(BaseModel):
     docs_dir: str = "sample_docs"
+
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/docs")
 
 
 @app.get("/health")
