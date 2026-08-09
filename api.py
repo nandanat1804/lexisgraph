@@ -11,17 +11,21 @@ import os
 from pathlib import Path
 
 from fastapi import Depends, FastAPI, HTTPException, Security
-from fastapi.responses import RedirectResponse
+from fastapi.responses import FileResponse
 from fastapi.security import APIKeyHeader
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from src.rag_pipeline import LexisGraphPipeline
+
+STATIC_DIR = Path(__file__).parent / "static"
 
 app = FastAPI(
     title="LexisGraph API",
     description="CPU-friendly enterprise legal RAG with hybrid retrieval",
     version="1.0.0",
 )
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 pipeline = LexisGraphPipeline()
 
@@ -52,7 +56,7 @@ class IngestRequest(BaseModel):
 
 @app.get("/", include_in_schema=False)
 def root():
-    return RedirectResponse(url="/docs")
+    return FileResponse(STATIC_DIR / "index.html")
 
 
 @app.get("/health")
